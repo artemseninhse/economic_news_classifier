@@ -12,13 +12,20 @@ model = load_pickle(MODEL)
 
 
 def classify_raw_texts(x):
+    world_news = []
+    russian_news = []
     for header, text in x:
         sent_preprocessed = preprocess_text(text, lemmatizer)
         sent_vectorized = vectorize_text(sent_preprocessed, vectorizer)
         prediction = make_prediction(sent_vectorized, model)
-        print(header)
-        print(f"The category of this article is {prediction}\n\n")
-
+        if prediction == "World":
+            world_news.append(header)
+        else:
+            russian_news.append(header)
+    print("МЕЖДУНАРОДНЫЕ НОВОСТИ:")
+    print("\n".join(world_news))
+    print("\nРОССИЙСКИЕ НОВОСТИ:")
+    print("\n".join(russian_news))
 
 texts = get_texts(BATCH_SIZE, MAX_SLEEP)
 classify_raw_texts(texts)
