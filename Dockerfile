@@ -6,7 +6,9 @@ ADD . /app
 
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
-RUN apt install postgresql postgresql-contrib
+RUN apt install postgresql
+
+RUN postgresql-contrib
 
 RUN sudo -i -u postgres
 
