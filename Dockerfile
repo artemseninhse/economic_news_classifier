@@ -1,5 +1,7 @@
 FROM python:3.9-slim
 
+RUN apt-get update && apt-get install -y apt-transport-https
+
 RUN apt install postgresql postgresql-contrib -y
 
 RUN sudo -i -u postgres
