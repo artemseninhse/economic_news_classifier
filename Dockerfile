@@ -1,4 +1,4 @@
-FROM python3
+FROM python:3.9-slim
 
 RUN apt install postgresql postgresql-contrib -y
 
