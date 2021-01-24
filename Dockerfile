@@ -1,6 +1,11 @@
 FROM python:3.9-slim
 
-RUN apt-get update && apt-get install -y apt-transport-https
+RUN apt-get update && apt-get install -y apt-transport-https\
+      apt-get -y install sudo
+
+RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
+
+USER docker
 
 RUN apt install postgresql postgresql-contrib -y
 
