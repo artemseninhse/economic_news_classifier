@@ -12,6 +12,11 @@ model = load_pickle(MODEL)
 
 
 def classify_raw_texts(x):
+    """
+    Determine category of the text (world news or Russian news)
+    :param x: text parsed from rbk.ru
+    :return: string containing predicted category
+    """
     world_news = []
     russian_news = []
     for header, text in x:
