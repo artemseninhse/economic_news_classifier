@@ -12,7 +12,10 @@
 4. Классификация текстов с помощью предобученной логистической регрессии
 
 ### Запуск программы
-'''
+```
 $ git clone https://github.com/artemseninhse/economic_news_classifier.git
-'''
+$ cd economic_news_classifier/
+$ docker build -t economic_news_classifier .
+$ docker run economic_news_classifier
+```
 
