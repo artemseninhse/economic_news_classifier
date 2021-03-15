@@ -1,3 +1,6 @@
+import warnings
+warnings.filterwarnings("ignore")
+
 from classifier import *
 from data_extractor import *
 from pymystem3 import Mystem
