@@ -1,17 +1,17 @@
-## Классификатор экономических новостей
+## Economic News Classifier
 
-![Пример работы программы](example.png)
+![Example](example.png)
 
-Данная программа классифицирует последние 20 экономических новостей с сайта РБК на две категории - иностранные новости (World) и российские новости (Russia).
+This program classifies 20 latest news from rbk.ru into 2 categories - foreign news (World) and Russian news (Russia).
 
-### Шаги работы программы
+### Steps
 
-1. Парсинг текстов последних 20 экономических новостей с сайта РБК
-2. Предобработка текстов, включающая лемматизацию и исключение спец.символов
-3. Получение векторных представлений текстов с использованием предобученного TFIDF
-4. Классификация текстов с помощью предобученной логистической регрессии
+1. Parsing the text of 20 latest news from rbk.ru
+2. Text preprocessing which includes lemmatization and deleting special characters
+3. Text vectorization using pretrained TFIDF
+4. Text classification using pretrained Logistic Regression classifier
 
-### Запуск программы
+### How to launch
 ```
 $ git clone https://github.com/artemseninhse/economic_news_classifier.git
 $ cd economic_news_classifier/
