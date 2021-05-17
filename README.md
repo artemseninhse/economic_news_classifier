@@ -11,7 +11,7 @@ This program classifies 20 latest news from rbk.ru into 2 categories - foreign n
 3. Text vectorization using pretrained TFIDF
 4. Text classification using pretrained Logistic Regression classifier
 
-### How to launch
+### Launch from terminal
 ```
 $ git clone https://github.com/artemseninhse/economic_news_classifier.git
 $ cd economic_news_classifier/
